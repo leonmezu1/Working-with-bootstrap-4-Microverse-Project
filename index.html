@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  <title>NewsWeek</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,600,700|Roboto:300,400,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<title>NewsWeek</title>
 </head>
+
 <body>
-  
+	<div class="fixed-top">
+		<div class="d-flex justify-content-between navigation-bar">
+			<div class="navdate p-2">
+				<date id="datenav">Tue, Oct 29, 2019</date>
+			</div>
+			<div class="p-2" id="signin">
+				<span>SIGN IN</span>
+				<a href="#" id="signinA">SUBSCRIBE<i class="fas fa-chevron-right" id="chevron"></i>
+				</a>
+				<i class="fas fa-bars" id="barsId"></i>
+			</div>
+		</div>
+		<div class="logoimg" id="biglogoid">
+			<img src="images/newsweek-logo.png" />
+		</div>
+	</div>
+	<nav class="header-bottom navigation-b">
+		<ul class="last-nav">
+			<li><a>U.S.</a></li>
+			<li><a>World</a></li>
+			<li><a>Business</a></li>
+			<li><a>Tech & Science</a></li>
+			<li><a>Culture</a></li>
+			<li><a>Newsgeek</a></li>
+			<li><a>Sports</a></li>
+			<li><a>Health</a></li>
+			<li><a>Opinion</a></li>
+			<li><a>Vantage</a></li>
+			<li><a id="search">Search</a><i class="fas fa-search"></i></li>
+		</ul>
+	</nav>
 </body>
+
 </html>
