@@ -9,19 +9,20 @@ body {
   line-height: 1.8rem;
   font-family: 'Roboto Condensed', sans-serif;
   overflow-x: hidden;
+  height: 500rem;
 }
 
-.navigation-bar {
+#navigation-bar {
   position: relative;
   margin: auto;
   background-color: #f72210;
   color: #fff;
   padding: 5rem 0 1rem 0;
   max-width: 131rem;
-  transition: all 0.1s;
+  transition: all 0.05s;
 }
 
-.navigation-b {
+#navigation-b {
   position: relative;
   top: 8.9rem;
   max-width: 131rem;
@@ -144,7 +145,7 @@ body {
   padding-left: 1rem;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 990px) {
   .logoimg {
     width: 13.2rem;
     height: 2rem;
@@ -156,9 +157,9 @@ body {
     color: #fff;
   }
 
-  .navigation-bar {
+  #navigation-bar {
     min-width: 48rem;
-    height: 4rem;
+    height: 5rem;
     padding: 0.5rem 0;
     font-size: 2rem;
   }
