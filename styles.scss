@@ -40,6 +40,7 @@ body {
 
 .logoimg > img {
   width: 100%;
+  cursor: pointer;
 }
 
 #datenav {
@@ -47,6 +48,7 @@ body {
   left: 2rem;
   font-size: 1.6rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 #signin {
@@ -55,6 +57,7 @@ body {
   font-weight: 600;
   position: relative;
   bottom: 1rem;
+  cursor: pointer;
 }
 
 #signin a {
@@ -153,10 +156,6 @@ body {
     top: 1rem;
   }
 
-  .fa-bars {
-    color: #fff;
-  }
-
   #navigation-bar {
     min-width: 48rem;
     height: 5rem;
@@ -168,21 +167,8 @@ body {
     display: none;
   }
 
-  #signin {
-    font-size: 1.4rem;
-    bottom: 0;
-  }
-
-  #signin a {
-    padding: 0.6rem;
-  }
-
-  .fa-chevron-right {
-    display: none !important;
-  }
-
   .fa-search {
-    bottom: -5rem;
+    display: none;
   }
 
   /* nav bottom */

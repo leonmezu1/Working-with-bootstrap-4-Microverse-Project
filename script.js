@@ -5,12 +5,12 @@ window.onscroll = function () {
 };
 
 window.onresize = function () {
-	toggle();
+	onwidth();
 };
 
 
-var nav = document.getElementById('navigation-bar');
-var sticky = nav.offsetTop;
+var navigation = document.getElementById('navigation-bar');
+var position = navigation.offsetTop;
 var date = document.getElementById('datenav');
 var shevron = document.getElementById('chevron');
 var bars = document.getElementById('barsId');
@@ -19,50 +19,59 @@ var signin = document.getElementById('signin');
 var subs = document.getElementById('subs');
 
 function wider() {
-	if (window.pageYOffset > sticky + 150) {
-			small();
+	if (window.pageYOffset > position + 150) {
+			smallnav();
 	} else {
-			big();
+			bignav();
 	}
 }
 
 
-function toggle() {
+function onwidth() {
 	if (window.innerWidth < 991) {
-			small();
+			smallnav();
 	} else {
-			big();
+			bignav();
 	}
 }
 
-function big() {
-	nav.style.paddingTop = "50px";
-	nav.style.paddingBottom = "10px";
-	nav.style.maxWidth = "1310px";
+function bignav() {
+	navigation.style.height = "9rem";
+	navigation.style.paddingTop = "5rem";
+	navigation.style.paddingBottom = "1rem";
+	navigation.style.maxWidth = "131rem";
 	date.style.display = 'block';
-	date.style.bottom = "50px";
+	date.style.bottom = "0";
 	shevron.style.display = 'inline';
 	bars.style.color = '#f72210';
-	logo.style.width = "396px";
-	logo.style.height = "60px";
+	logo.style.width = "39.6rem";
+	logo.style.height = "6rem";
 	logo.style.left = "50%";
-	logo.style.top = "15px";
-	signin.style.fontSize = "18px";
-	signin.style.bottom = "10px";
-	subs.style.padding = "8px";
+	logo.style.top = "1.5rem";
+	signin.style.fontSize = "1.8rem";
+	signin.style.bottom = "1rem";
+	signin.style.cursor = "pointer";
 }
 
-function small() {
-	nav.style.paddingTop = "3px";
-	nav.style.paddingBottom = "3px";
-	nav.style.maxWidth = "100%";
+function smallnav() {
+	navigation.style.height = "5rem";
+	navigation.style.paddingTop = "0.3rem";
+	navigation.style.paddingBottom = "0.3rem";
+	navigation.style.maxWidth = "100%";
+	navigation.style.alignItems = "center";
 	date.style.display = 'none';
-	bars.style.color = '#fff';
-	logo.style.width = "132px";
-	logo.style.height = "20px";
-	logo.style.left = "100px";
-	logo.style.top = "10px";
-	signin.style.fontSize = "14px";
-	signin.style.bottom = "0px";
-	subs.style.padding = "6px";
+	bars.style.right = '-5rem';
+	bars.style.color = '#FB9A94';
+	bars.style.top = '-1rem';
+	bars.style.margin = '0 2rem'
+	bars.style.fontSize = '3rem';
+	logo.style.width = "13.2rem";
+	logo.style.height = "2rem";
+	logo.style.left = "10rem";
+	logo.style.top = "1rem";
+	signin.style.right = '5rem';
+	signin.style.fontSize = "1.8rem";
+	signin.style.bottom = "0";
+	subs.style.padding = "0.3rem 0 0.3rem 1.2rem";
+	signin.style.cursor = "pointer";
 }
