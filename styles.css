@@ -12,6 +12,10 @@ body {
   height: 500rem;
 }
 
+img {
+  width: 100%;
+}
+
 #navigation-bar {
   position: relative;
   margin: auto;
@@ -188,11 +192,8 @@ body {
 }
 /* MAIN CONTENT */
 .wide {
+  margin-top: 10rem;
   max-width: 131rem;
-}
-
-.main-content {
-  margin: 11rem auto;
 }
 
 .section-title {
@@ -239,16 +240,65 @@ h3 {
 .main-text {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0px 0px 10px;
+  padding: 0 0 10px;
 }
 
 .related {
-  padding: 10px 0px;
+  padding: 10px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   font-size: 17px;
   font-weight: 700;
   color: #000;
+}
+
+.culture-stories {
+  margin-top: 0;
+}
+
+.culture-title > a {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  color: #272727;
+  text-decoration: none;
+}
+
+.culture-title > a:hover {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  color: #272727;
+  text-decoration: none;
+}
+
+.culture-item .info {
+  padding: 15px 10px 20px;
+}
+
+.culture-item .summary {
+  font: 15px/20px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: rgba(39, 39, 39, 0.5);
+  margin-bottom: 10px;
+}
+
+.culture-item .tags {
+  font: 300 13px/20px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: #272727;
+}
+
+.culture-item .tags a {
+  display: inline-block;
+  background-color: #c2d4d7;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  color: #272727;
+}
+
+.culture-item .tags a:hover {
+  background-color: #272727;
+  color: #c2d4d7;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
