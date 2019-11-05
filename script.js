@@ -18,8 +18,10 @@ var logo = document.getElementById('big');
 var signin = document.getElementById('signin');
 var subs = document.getElementById('subs');
 
+var sticked = document.getElementsByClassName('sticked');
+
 function wider() {
-	if (window.pageYOffset > position + 150) {
+	if (window.pageYOffset > position + 110) {
 			smallnav();
 	} else {
 			bignav();
@@ -32,6 +34,9 @@ function onwidth() {
 			smallnav();
 	} else {
 			bignav();
+			sticked.style.position = '-webkit-sticky';
+			sticked.style.position = 'sticky';
+			sticked.style.top = '0';
 	}
 }
 

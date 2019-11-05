@@ -19,7 +19,7 @@ img {
   position: relative;
   margin: auto;
   background-color: #f72210;
-  color: #fff;
+  color: #d1b2b2;
   padding: 5rem 0 1rem 0;
   max-width: 131rem;
   -webkit-transition: all 0.05s;
@@ -54,6 +54,7 @@ img {
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
+  color: #fff;
 }
 
 #signin {
@@ -63,6 +64,7 @@ img {
   position: relative;
   bottom: 1rem;
   cursor: pointer;
+  color: #fff;
 }
 
 #signin a {
@@ -157,7 +159,7 @@ img {
   padding-left: 1rem;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 991px) {
   .logoimg {
     width: 13.2rem;
     height: 2rem;
@@ -183,10 +185,6 @@ img {
   /* nav bottom */
   .header-bottom {
     display: none;
-  }
-
-  .main-content {
-    padding-top: 8rem;
   }
 }
 /* MAIN CONTENT */
@@ -251,7 +249,8 @@ h3 {
   color: #000;
 }
 
-.culture-stories {
+.culture-stories,
+.the-more-the-better {
   margin-top: 0;
 }
 
@@ -325,9 +324,14 @@ h6 {
   padding-bottom: 10px;
 }
 
-.headshot {
-  height: 63px;
-  max-width: 63px;
+.opinion-img {
+  min-width: 63px;
+  max-width: 63.01px;
+}
+
+.byline,
+.info {
+  margin-left: 25px;
 }
 
 .info {
@@ -335,17 +339,30 @@ h6 {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 5px;
-  margin-left: -10px;
 }
 
 .byline {
   color: #555;
   padding: 0;
-  margin: 0;
 }
 
 #last-opinion {
   border: none;
+}
+
+.Sti {
+  z-index: 0;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 5rem !important;
+}
+
+@media screen and (min-width: 991px) {
+  .sticked {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
