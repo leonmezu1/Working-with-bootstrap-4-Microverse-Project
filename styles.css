@@ -187,6 +187,47 @@ img {
     display: none;
   }
 }
+@media screen and (max-width: 480px) {
+  .logoimg {
+    width: 13.2rem;
+    height: 2rem;
+    left: 5rem;
+    top: 1rem;
+  }
+
+  #signin {
+    position: relative;
+    left: -30%;
+  }
+
+  #signin > * {
+    font-size: 1.2rem;
+  }
+
+  #signin i {
+    font-size: 1rem;
+  }
+
+  #navigation-bar {
+    min-width: 48rem;
+    height: 5rem;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+  }
+
+  #datenav {
+    display: none;
+  }
+
+  .fa-search {
+    display: none;
+  }
+
+  /* nav bottom */
+  .header-bottom {
+    display: none;
+  }
+}
 /* MAIN CONTENT */
 .wide {
   margin-top: 10rem;
@@ -299,13 +340,25 @@ h3 {
   text-decoration: none;
 }
 
+.new-story {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #more-stories-part {
   padding-top: 14px;
   padding-bottom: 10px;
   border-top: 1px solid #ddd;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-#image {
+#image img {
   float: left;
   width: 135px;
   margin-right: 15px;
@@ -350,18 +403,49 @@ h6 {
   border: none;
 }
 
-.Sti {
-  z-index: 0;
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 5rem !important;
-}
-
 @media screen and (min-width: 991px) {
   .sticked {
     position: -webkit-sticky;
     position: sticky;
     top: 4rem;
+  }
+
+  .stickedplus {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 72rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #image img {
+    margin: 1rem 1rem;
+    width: 258px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #image img {
+    margin: 1rem 1rem;
+    width: 200px;
+  }
+
+  .new-story {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (max-width: 420px) {
+  #image img {
+    margin: 1rem 1rem;
+    width: 200px;
+  }
+
+  .new-story {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
