@@ -350,14 +350,14 @@ h3 {
   justify-content: space-between;
 }
 
-#more-stories-part {
+#related-info {
   padding-top: 14px;
   padding-bottom: 10px;
   border-top: 1px solid #ddd;
   height: fit-content;
 }
 
-#image img {
+#story-img img {
   float: left;
   width: 135px;
   margin-right: 15px;
@@ -429,14 +429,14 @@ h6 {
     margin-top: 4rem;
   }
 
-  #image img {
+  #story-img img {
     margin: 1rem 1rem;
     width: 258px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  #image img {
+  #story-img img {
     margin: 1rem 1rem;
     width: 200px;
   }
@@ -447,7 +447,7 @@ h6 {
 }
 
 @media screen and (max-width: 420px) {
-  #image img {
+  #story-img img {
     margin: 1rem 1rem;
     width: 200px;
   }
@@ -525,12 +525,6 @@ h6 {
   background-color: rgb(219, 220, 221);
 }
 
-.seized {
-  display: block;
-  height: fit-content;
-  padding: 0;
-}
-
 .contained-title {
   flex-direction: row;
   align-items: flex-start;
@@ -553,7 +547,8 @@ h6 {
 .topic-img {
   position: relative;
   background-position: center;
-  background-size: cover cover;
+	background-size: cover;
+	background-repeat: no-repeat;
   height: 15.089vw;
   overflow: hidden;
 }
@@ -606,9 +601,9 @@ h6 {
 
 .No7 {
   background-image: url(images/queens-speech.jpg);
-	height: 16.5vw;
-	position: relative;
-	margin-bottom: 1rem;
+  height: 16.5vw;
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 #focused {
@@ -619,6 +614,20 @@ h6 {
   color: #fff;
   font-size: 17px;
   font-weight: 700;
-	text-transform: uppercase;
-	font: bold 17px/16px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  font: bold 17px/16px "Roboto Condensed", sans-serif;
+}
+
+.second-r {
+  margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+  .topic-img {
+    height: 62vw;
+  }
+
+  #No7 {
+    height: 62vw;
+  }
 }
