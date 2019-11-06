@@ -470,7 +470,8 @@ h6 {
   display: block;
   width: 30px;
   height: 30px;
-  background: url(https://g.newsweek.com/www/images/logo-n1.svg) center/contain no-repeat #f72210;
+  background: url(https://g.newsweek.com/www/images/logo-n1.svg) center/contain
+    no-repeat #f72210;
   margin-right: 10px;
   background-size: 28px 29px;
 }
@@ -499,4 +500,19 @@ h6 {
   font: bold 15px/15px "Roboto", sans-serif;
   position: relative;
   top: 4rem;
+}
+
+/* Finished the main-block */
+
+.gray {
+  display: block;
+  height: 38px;
+  padding: 10px 10px 10px 12px;
+  font: bold 18px/18px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  background-color: rgb(244, 245, 246);
+}
+
+.gray:hover {
+  background-color: rgb(219, 220, 221);
 }

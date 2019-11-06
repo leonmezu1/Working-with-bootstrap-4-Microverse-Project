@@ -507,4 +507,18 @@ h6 {
   top: 4rem;
 }
 
+/* Finished the main-block */
+.gray {
+  display: block;
+  height: 38px;
+  padding: 10px 10px 10px 12px;
+  font: bold 18px/18px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  background-color: #f4f5f6;
+}
+
+.gray:hover {
+  background-color: #dbdcdd;
+}
+
 /*# sourceMappingURL=styles.css.map */
