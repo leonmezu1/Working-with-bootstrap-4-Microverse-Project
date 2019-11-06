@@ -516,3 +516,28 @@ h6 {
 .gray:hover {
   background-color: rgb(219, 220, 221);
 }
+
+.seized {
+	display: block;
+	height: fit-content;
+	padding: 0;
+}
+
+.contained-title {
+	flex-direction: row;
+	align-items: flex-start;
+	margin-top: 0;
+}
+
+.magazine-title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  padding-top: 0;
+}
+
+.bordered {
+  border-bottom: 1px solid #d9d9d9;
+  margin: 20px auto;
+}
