@@ -705,6 +705,7 @@ h6 {
 }
 
 .last-subs {
+  position: relative;
   margin: 30px;
 }
 
@@ -717,16 +718,60 @@ h6 {
   width: 170px;
 }
 
+.f1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.fn {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image-bottom {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  padding-bottom: 13px;
+  padding-right: 90px;
+}
+
+.mag-thumb {
+  width: 170px;
+  height: 228px;
+}
+
 .current {
   position: absolute;
-  z-index: 3;
-  top: 15px;
+  top: 13px;
   left: 80px;
 }
 
-.prev {
-  position: absolute;
-  z-index: 2;
+.info-new {
+  padding-left: 30px;
+}
+
+.lk {
+  display: inline-block;
+  padding: 10px 10px 10px 12px;
+  color: white;
+  font: bold 18px/18px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  background-color: #666;
+}
+
+.red {
+  background-color: #f72210;
 }
 
 /*# sourceMappingURL=styles.css.map */

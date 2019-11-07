@@ -699,26 +699,63 @@ h6 {
 }
 
 .last-subs {
-	margin: 30px;
+  position: relative;
+  margin: 30px;
 }
 
 .images-s {
-	position: relative;
+  position: relative;
 }
 
 .last-subs img {
-	height: 227px;
-	width: 170px;
+  height: 227px;
+  width: 170px;
+}
+
+.f1 {
+	flex: 1;
+}
+
+.fn {
+	flex: none;
+}
+
+ai-c {
+	align-items: center;
+}
+
+.image-bottom {
+	width: fit-content;
+  position: relative;
+  padding-bottom: 13px;
+  padding-right: 90px;
+}
+
+.mag-thumb {
+  width: 170px;
+  height: 228px;
 }
 
 .current {
-	position: absolute;
-	z-index: 3;
-	top: 15px;
-	left: 80px;
+  position: absolute;
+  top: 13px;
+  left: 80px;
 }
 
-.prev {
-	position: absolute;
-	z-index: 2;
+.info-new {
+  padding-left: 30px;
+}
+
+.lk {
+  display: inline-block;
+  padding: 10px 10px 10px 12px;
+  color: white;
+  font: bold 18px/18px "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  background-color: #666;
+}
+
+.red {
+	background-color: #f72210;
 }
