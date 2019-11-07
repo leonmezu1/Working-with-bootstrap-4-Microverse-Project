@@ -669,4 +669,27 @@ h6 {
   color: #e9212e;
 }
 
+.red-title {
+  color: #f72210;
+  font: bold 22px/22px "Roboto Condensed" sans-serif;
+  line-height: 22px;
+  text-transform: none;
+}
+
+.in-line-news img {
+  height: 90px;
+  width: 135px;
+}
+
+.in-line-news span {
+  padding: 0 1rem;
+  color: #000;
+  font: 700 16px/16px "Roboto Condensed";
+}
+
+.bordered-line {
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
