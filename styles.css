@@ -39,14 +39,15 @@ img {
   width: 39.6rem;
   height: 6rem;
   -webkit-transform: translate(-55%, 0);
-          transform: translate(-55%, 0);
+  transform: translate(-55%, 0);
   top: 1.5rem;
   left: 50%;
+  cursor: pointer;
+  fill: #fff;
 }
 
-.logoimg > img {
+.logoimg svg {
   width: 100%;
-  cursor: pointer;
 }
 
 #datenav {
@@ -129,8 +130,8 @@ img {
 
 .last-nav li {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: center;
   border-left: 0.1rem solid #d9d9d9;
 }
@@ -188,6 +189,7 @@ img {
     display: none;
   }
 }
+
 @media screen and (max-width: 480px) {
   .logoimg {
     width: 13.2rem;
@@ -229,7 +231,9 @@ img {
     display: none;
   }
 }
+
 /* MAIN CONTENT */
+
 .wide {
   max-width: 131rem;
 }
@@ -350,8 +354,8 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 #related-info {
@@ -421,6 +425,7 @@ h6 {
     top: 72rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   .sticked-only {
     position: -webkit-sticky;
@@ -428,6 +433,7 @@ h6 {
     top: 4rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .upper {
     margin-top: 4rem;
@@ -438,6 +444,7 @@ h6 {
     width: 258px;
   }
 }
+
 @media screen and (max-width: 480px) {
   #story-img img {
     margin: 1rem 1rem;
@@ -447,10 +454,11 @@ h6 {
   .new-story {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
+
 @media screen and (max-width: 420px) {
   #story-img img {
     margin: 1rem 1rem;
@@ -460,10 +468,11 @@ h6 {
   .new-story {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
+
 .last-block-sign {
   top: 0.5rem;
   position: relative;
@@ -532,11 +541,11 @@ h6 {
 .contained-title {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin-top: 0;
 }
 
@@ -641,6 +650,7 @@ h6 {
     height: 62vw;
   }
 }
+
 .boxed-shadow::after {
   border-bottom: 3px solid red;
   border-right: 3px solid red;
@@ -699,6 +709,7 @@ h6 {
     max-width: 258px;
   }
 }
+
 .subs {
   font-size: 18px;
   text-transform: uppercase;
@@ -720,20 +731,20 @@ h6 {
 
 .f1 {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .fn {
   -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  -ms-flex: none;
+  flex: none;
 }
 
 ai-c {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .image-bottom {
@@ -794,4 +805,68 @@ ai-c {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+#Layer_1 {
+  fill: #f72210;
+  width: 236px;
+  height: 36px;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 7rem;
+}
+
+.copy {
+  vertical-align: bottom;
+  padding-left: 10px;
+}
+
+.social-icons {
+  text-align: right;
+}
+
+.social-icons > i {
+  vertical-align: bottom;
+  font-size: 25px;
+  color: #666;
+  padding-left: 7px;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 15px;
+  list-style: none;
+  margin: 0;
+  color: #666;
+  padding: 0;
+}
+
+.li-item {
+  border-right: 1px solid #d9d9d9;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.li-item:hover {
+  color: #000;
+}
+
+#right {
+  text-align: right;
+  padding: 0;
+}
+
+.last {
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .social-icons {
+    text-align: left;
+  }
+} /*# sourceMappingURL=styles.css.map */
