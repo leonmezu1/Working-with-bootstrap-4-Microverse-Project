@@ -692,4 +692,12 @@ h6 {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .in-line-news img {
+    height: 172px;
+    min-width: 258px;
+    max-width: 258px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -684,3 +684,11 @@ h6 {
   border-bottom: 1px solid #d9d9d9;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 768px) {
+  .in-line-news img {
+    height: 172px;
+    min-width: 258px;
+    max-width: 258px;
+  }
+}
