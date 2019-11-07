@@ -275,6 +275,7 @@ img {
 }
 
 h3 {
+  margin-top: 1rem;
   font-weight: 700;
   font-size: 22px;
   color: #000;
@@ -536,8 +537,8 @@ h6 {
   font-weight: bold;
   margin-bottom: 15px;
   text-transform: uppercase;
-	padding-top: 0;
-	padding-bottom: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
 }
 
 .bordered {
@@ -548,8 +549,8 @@ h6 {
 .topic-img {
   position: relative;
   background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 15.089vw;
   overflow: hidden;
 }
@@ -643,4 +644,20 @@ h6 {
   position: absolute;
   bottom: -4px;
   right: -4px;
+}
+
+.big-inner {
+  width: 70px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 58px;
+  text-indent: 5px;
+  text-align: center;
+  background: url(images/icon-slideshows-nw.png) 0 0/contain no-repeat;
+  color: #e9212e;
 }
