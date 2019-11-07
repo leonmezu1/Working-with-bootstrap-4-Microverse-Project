@@ -699,5 +699,34 @@ h6 {
     max-width: 258px;
   }
 }
+.subs {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.last-subs {
+  margin: 30px;
+}
+
+.images-s {
+  position: relative;
+}
+
+.last-subs img {
+  height: 227px;
+  width: 170px;
+}
+
+.current {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  left: 80px;
+}
+
+.prev {
+  position: absolute;
+  z-index: 2;
+}
 
 /*# sourceMappingURL=styles.css.map */
