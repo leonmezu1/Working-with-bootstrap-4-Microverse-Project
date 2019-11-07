@@ -176,10 +176,6 @@ img {
   border-left: 0.1rem solid #d9d9d9;
 }
 
-.last-nav > li > a {
-  cursor: pointer;
-}
-
 .last-nav > li:nth-child(-n + 10):hover {
   color: #f72210 !important;
 }
@@ -398,6 +394,12 @@ h3 {
   width: 170px;
 }
 
+.in-line-news img {
+  height: 90px;
+  min-width: 135px;
+  max-width: 135px;
+}
+
 #story-img > img {
   float: left;
   width: 135px;
@@ -423,12 +425,9 @@ h6 {
 }
 
 .byline {
-  margin-left: 25px;
-}
-
-.byline {
   color: #555;
   padding: 0;
+  margin-left: 25px;
 }
 
 #last-opinion {
@@ -704,12 +703,6 @@ h6 {
   color: #f72210;
   font: bold 22px "Roboto Condensed", sans-serif;
   text-transform: none;
-}
-
-.in-line-news img {
-  height: 90px;
-  min-width: 135px;
-  max-width: 135px;
 }
 
 .bordered-line {
