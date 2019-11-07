@@ -3,9 +3,9 @@
 
 Objective: Use the Bootstrap 4 Framework to design a clone of the NewsWeek page.
 
-Project preview: https://rawcdn.githack.com/leonmezu1/Responsive-Design/016da4a73d40825c48cc55d8b51b53f355382ae8/index.html
+Project preview: https://raw.githack.com/leonmezu1/Working-with-bootstrap-4-Microverse-Project/Beta/index.html
 
-The original page: https://thenextweb.com/
+The original page: https://www.newsweek.com/
 
 This project was made by Leonardo Mezu, some of my repositories are available for you to check:
 
