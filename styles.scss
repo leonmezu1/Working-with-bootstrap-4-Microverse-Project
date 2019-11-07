@@ -664,14 +664,14 @@ h6 {
 
 .red-title {
   color: #f72210;
-  font: bold 22px/22px "Roboto Condensed" sans-serif;
-  line-height: 22px;
+  font: bold 22px "Roboto Condensed", sans-serif;
   text-transform: none;
 }
 
 .in-line-news img {
   height: 90px;
-  width: 135px;
+  min-width: 135px;
+  max-width: 135px;
 }
 
 .in-line-news span {
