@@ -713,19 +713,19 @@ h6 {
 }
 
 .f1 {
-	flex: 1;
+  flex: 1;
 }
 
 .fn {
-	flex: none;
+  flex: none;
 }
 
 ai-c {
-	align-items: center;
+  align-items: center;
 }
 
 .image-bottom {
-	width: fit-content;
+  width: fit-content;
   position: relative;
   padding-bottom: 13px;
   padding-right: 90px;
@@ -757,5 +757,18 @@ ai-c {
 }
 
 .red {
-	background-color: #f72210;
+  background-color: #f72210;
+}
+
+.image-last {
+  background: rgba(0, 0, 0, 0) url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5") no-repeat scroll center center/cover;
+  max-width: 191px;
+	width: 60%;
+	height: 290px;
+}
+
+.info-new p {
+	line-height: 1.5;
+	margin: 2rem 0;
+	font-size: 16px;
 }
