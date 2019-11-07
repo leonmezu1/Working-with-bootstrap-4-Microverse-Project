@@ -787,4 +787,11 @@ ai-c {
   font-size: 16px;
 }
 
+@media screen and (max-width: 575px) {
+  .image-last {
+    max-width: 90vw;
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -763,12 +763,19 @@ ai-c {
 .image-last {
   background: rgba(0, 0, 0, 0) url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5") no-repeat scroll center center/cover;
   max-width: 191px;
-	width: 60%;
-	height: 290px;
+  width: 60%;
+  height: 290px;
 }
 
 .info-new p {
-	line-height: 1.5;
-	margin: 2rem 0;
-	font-size: 16px;
+  line-height: 1.5;
+  margin: 2rem 0;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 575px) {
+  .image-last {
+		max-width: 90vw;
+		width: 100%;
+	}
 }
