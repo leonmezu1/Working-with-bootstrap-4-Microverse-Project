@@ -9,9 +9,6 @@ The original page: https://www.newsweek.com/
 
 This project was made by Leonardo Mezu, some of my repositories are available for you to check:
 
-Kitzia Vidal:
-https://github.com/kitpao?tab=repositories
-
 Leonardo Mezu:
 https://github.com/leonmezu1?tab=repositories
 
