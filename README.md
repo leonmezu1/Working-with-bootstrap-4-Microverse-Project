@@ -31,7 +31,7 @@ That's why a good way to learn how to use this framework it's building a replica
 
 * Build a replica of the NewsWeek webpage ensuring it looks and behaves like the original one.
 * Use Bootstrap CSS classes wherever it is possible.
-* Ensure the replica satisties responsive behavior.
+* Ensure the replica satisfies responsive behavior.
 
 
 ## Skills to use and requirements:
