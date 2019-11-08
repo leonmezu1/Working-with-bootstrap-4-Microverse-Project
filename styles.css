@@ -72,15 +72,15 @@ a {
   color: #fff;
 }
 
+footer a {
+  color: #666 !important;
+}
+
 .social-icons > a {
   vertical-align: bottom;
   font-size: 25px;
   color: #666 !important;
   padding-left: 7px;
-}
-
-footer a {
-  color: #666 !important;
 }
 
 .culture-title > a {
