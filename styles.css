@@ -16,6 +16,10 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 #navigation-bar {
   position: relative;
   margin: auto;
@@ -104,6 +108,11 @@ img {
 }
 
 #signin a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#signin a:nth-child(2) {
   text-decoration: none;
   color: #f72210;
   background-color: #fff;
@@ -823,7 +832,7 @@ footer {
 .social-icons > i {
   vertical-align: bottom;
   font-size: 25px;
-  color: #666;
+  color: #666 !important;
   padding-left: 7px;
 }
 
@@ -835,7 +844,7 @@ footer {
   line-height: 15px;
   list-style: none;
   margin: 0;
-  color: #666;
+  color: #666 !important;
   padding: 0;
 }
 
@@ -847,8 +856,13 @@ footer {
   cursor: pointer;
 }
 
-.li-item:hover {
-  color: #000;
+footer a {
+  color: #666 !important;
+}
+
+footer a:hover {
+  color: #000 !important;
+  text-decoration: none;
 }
 
 #right {
