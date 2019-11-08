@@ -1,12 +1,1124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/png" href="https://g.newsweek.com/themes/newsweek/favicons/favicon-16x16.png"
+		sizes="16x16">
+	<title>NewsWeek</title>
 </head>
+
 <body>
-  
+	<!-- Header and nav -->
+	<header class="fixed-top" id="navi">
+		<div class="d-flex justify-content-between" id="navigation-bar">
+			<div class="p-2">
+				<div id="datenav">Thu, Oct 31, 2019</div>
+			</div>
+			<div class="p-2" id="signin">
+				<a href="https://subscription.newsweek.com/auth"><span>SIGN IN</span></a><a href="#" id="subs">SUBSCRIBE <i
+						class="fas fa-chevron-right" id="chevron"></i></a>
+				<i class="fas fa-bars" id="barsId"></i>
+			</div>
+		</div>
+
+		<svg class="logoimg" version="1.1" id="big" xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="user-select: auto;"
+			xml:space="preserve">
+			<g style="user-select: auto;">
+				<path class="st0"
+					d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+					style="user-select: auto;"></path>
+			</g>
+		</svg>
+	</header>
+	<!-- Only nav -->
+	<nav class="header-bottom" id="navigation-b">
+		<ul class="last-nav">
+			<li><a>U.S.</a></li>
+			<li><a>World</a></li>
+			<li><a>Business</a></li>
+			<li><a>Tech & Science</a></li>
+			<li><a>Culture</a></li>
+			<li><a>Newsgeek</a></li>
+			<li><a>Sports</a></li>
+			<li><a>Health</a></li>
+			<li><a>Opinion</a></li>
+			<li><a>Vantage</a></li>
+			<li><a id="search">Search</a><i class="fas fa-search"></i></li>
+		</ul>
+	</nav>
+	<!-- End of header and Nav-->
+	<!-- Started MAIN CONTENT-->
+	<main>
+		<div class="container-fluid wide upper">
+			<div class="main-block">
+				<div class="row">
+
+					<div class="col-sm-12 order-sm-2 col-md-4 order-md-1 col-lg order-lg-1" id="left-col">
+						<div class="main-content sticked sticked-only">
+							<div class="section-title">FEATURED STORIES</div>
+							<div class="story">
+								<div class="boxed">
+									<a><img src="images/washington-nationals.jpg" class="img-fluid" alt="article-picture"><span
+											class="inner-caption"> </span></a>
+								</div>
+								<div class="story-info">
+									<h3>World Series: All Records the Nationals Broke to Win Historic First Title</h3>
+									<div class="main-text">The Nationals defeated the Astros in Game 7 in Houston to become the first team
+										in World Series history to win four games on the road.</div>
+								</div>
+							</div>
+
+							<div class="story">
+								<div class="boxed">
+									<a><img src="images/donald-trump-police-annual-conference-chicago.jpg" class="img-fluid"
+											alt="article-picture"><span class="inner-caption"> </span></a>
+								</div>
+								<div class="story-info">
+									<h3>More People Think Trump Will Win in 2020 Over Democratic Nominee: Poll</h3>
+									<div class="main-text">The survey also showed that support for President Donald Trump in the 2020
+										election had increased from a similar poll conducted in August.</div>
+								</div>
+							</div>
+
+							<div class="story">
+								<div class="boxed">
+									<a><img src="images/coal.jpg" class="img-fluid" alt="article-picture"><span class="inner-caption">
+										</span></a>
+								</div>
+								<div class="story-info">
+									<h3>Behind Coal's Decline: Cheap Natural Gas Threatens Industry</h3>
+									<div class="main-text">While an average annual capacity of 5.6 GW was retired each year President
+										Barack Obama was in office, 9.6 GW has been retired each year under President Donald Trump, Rhodium
+										Group, an independent research firm, told Newsweek</div>
+								</div>
+							</div>
+
+							<div class="story">
+								<div class="boxed">
+									<a><img src="images/best-customer-service-2020.jpg" class="img-fluid" alt="article-picture"><span
+											class="inner-caption">U.S.</span></a>
+								</div>
+								<div class="story-info">
+									<h3>Best Customer Service 2020</h3>
+									<div class="main-text">For the second year in a row, we worked with Statista to collect and analyze
+										data across 160 retail categories.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="complicated col-sm-12 order-sm-1 col-md-8 order-md-2 col-lg-5 order-lg-2">
+						<div class="main-content">
+							<div class="section-title">TOP STORY</div>
+							<div class="story">
+								<div class="boxed">
+									<a href="#"><img src="images/lawmakers-broke-party-rank-impeachment-resolution.jpg" class="img-fluid"
+											alt="article-picture"><span class="inner-caption">POLITICS</span></a>
+								</div>
+								<h3>Two Democrats Break With Party in Impeachment Vote</h3>
+								<div class="main-text">Meet Representatives Jeff Van Drew and Collin Peterson, Democratic lawmakers who
+									won Trump districts in 2018.</div>
+							</div>
+						</div>
+						<div class="main-content">
+							<div class="culture-stories">
+								<div class="section-title">CULTURE &amp; TRAVEL</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-6 col-lg-6 culture-item">
+										<div class="image">
+											<img src="images/hong-kong-victoria-harbor.jpg" alt="hong" class="img-fluid">
+										</div>
+										<div class="info">
+											<div class="culture-title my-4">
+												<a href="#">Is It
+													Safe to Travel to Hong Kong During Protests? Here's What to Consider</a></div>
+											<div class="summary">A drop in tourism has thinned the crowds, but locals assert the city is
+												safer than you would think.</div>
+											<div class="tags"><a href="#" class="active">Hong Kong</a></div>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 culture-item">
+										<div class="image">
+											<img src="images/town-dusk.jpg" alt="hong" class="img-fluid">
+										</div>
+										<div class="info">
+											<div class="culture-title my-4">
+												<a href="#">What the History of
+													Witches Reveals About Our Own Fears</a></div>
+											<div class="summary">Our fascination with the witch throughout the ages tells us more about
+												ourselves than the history of Halloween.</div>
+											<div class="tags"><a href="#" class="active">Witches</a></div>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 culture-item">
+										<div class="image">
+											<img src="images/cul-map-ruins-01-177513522.jpg" alt="hong" class="img-fluid">
+										</div>
+										<div class="info">
+											<div class="culture-title my-4">
+												<a href="#">Lesser-Known Ruins of the Ancient World</a></div>
+											<div class="summary">While most everyone is familiar with Angkor Wat, Petra or Rome's Colosseum,
+												it is sometimes the overlooked cities—once megalopolises now in disrepair—that tell a more
+												potent story.</div>
+											<div class="tags"><a href="#" class="active">Travel</a></div>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 culture-item">
+										<div class="image">
+											<img src="images/7-best-small-museums-london.jpg" alt="hong" class="img-fluid">
+										</div>
+										<div class="info">
+											<div class="culture-title my-4">
+												<a href="#">Skip the Big Museums in London and Visit These
+													Unusual Ones Instead</a></div>
+											<div class="summary">From exhibits of bizarre taxidermied beasts to surgical theaters where
+												operations were performed, here are London's most unique museums worthy of your attention.
+											</div>
+											<div class="tags"><a href="#" class="active">Travel</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-content">
+							<div class="col-sm-12 order-sm-1 col-md-12 order-md-2 col-lg">
+								<div class="main-content">
+									<div class="section-title">MORE STORIES</div>
+									<div class="the-more-the-better">
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/kincade-fire-calistoga-california.jpg"
+													alt="California-fires" class="fluid float-left mr-4">
+											</div>
+											<div class="main-text">
+												<h6>
+													California Fire Map Update: 10 Active Blazes Across State
+												</h6>
+												Dangerous fire weather conditions persist with a string of new fires
+												breaking
+												out
+												in Ventura, Riverside and Orange County.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/isis-flag-iraq-syria-border.jpg" alt="isis-flag"
+													class="fluid float-left mr-4"></div>
+											<div class="main-text">
+												<h6>
+													ISIS Names New Leader, Spokesperson in First Message Since Baghdadi Killed
+												</h6>
+												The new ISIS caliph is Abu Ibrahim al-Qurayshi and its spokesperson is Abu
+												Hamza
+												al-Qurashi
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/nra-ny-ag.jpg" alt="NRA" class="fluid float-left mr-4"></div>
+											<div class="main-text">
+												<h6>
+													National Rifle Association, New York Attorney General Square Off in Court
+												</h6>
+												The two quarreled over whether the NRA had a right to review documents
+												related
+												to
+												the attorney general's investigation into its tax-exempt status.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/afghan-national-army-ana-soldiers.jpg" alt="soldiers"
+													class="fluid float-left mr-4"></div>
+
+											<div class="main-text">
+												<h6>CIA-Backed Afghan Forces Committed 'Serious Abuses': Report</h6>
+												The report by Human Rights Watch accuses the Afghan forces, which are
+												supported
+												by the U.S., of war crimes.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/trump-gop-senators.jpg" alt="Trump-senators"
+													class="fluid float-left mr-4"></div>
+
+											<div class="main-text">
+												<h6>Ex-Bush Lawyer: Trump Committing 'Bribery' by Giving Cash to GOP Senators</h6>
+												"Any other American who offered cash to the jury before a trial would go to
+												prison," Richard Painter said.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/syria-military-kurds-ypg-flags.jpg" alt="syria"
+													class="fluid float-left mr-4"></div>
+
+											<div class="main-text">
+												<h6>Syria Asks U.S. Allies to Join Army as Clashes Threaten Russia-Turkey Deal</h6>
+												"We in Syria face one enemy and we must exert with the sons of a united
+												Syria,
+												from Arabs and from Kurds, our blood to recover every inch of the beloved Syrian territory."
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/halloween-pumpkin-rain.jpg" alt="halloween-pumpkin-rain"
+													class="fluid float-left mr-4">
+											</div>
+
+											<div class="main-text">
+												<h6>Halloween Trick-or-Treating Postponed in Many Communities Due to Weather</h6>
+												A low pressure system is expected to bring thunderstorms and rain to
+												trick-or-treaters all the way from the Deep South to much of the East Coast on Thursday.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/special-operations-dog-baghdadi-syria-raid.png"
+													alt="special" class="fluid float-left mr-4">
+											</div>
+
+											<div class="main-text">
+												<h6>Trump Announces Conan the Army Dog Will Visit the White House Next Week</h6>
+												President Donald Trump tweeted a Photoshopped picture of the dog with a
+												paw-shaped medal when he announced the news on Thursday.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/north-korea-missile-test-launch-donald-trump.jpg"
+													alt="korea" class="fluid float-left mr-4">
+											</div>
+
+											<div class="main-text">
+												<h6>Kim Pushing 'Maximum Pressure' Campaign Against Trump With Latest Test</h6>
+												North Korea fired two missiles into the sea off its eastern coast on
+												Thursday
+												as
+												denuclearization negotiations with the U.S. remain stalled.
+											</div>
+										</div>
+
+										<div class="new-story clear-fix related-info">
+											<div class="story-img"><img src="images/dinosaur-footprints-alaskan-peninsula.jpg" alt="Alaska"
+													class="fluid float-left mr-4">
+											</div>
+
+											<div class="main-text">
+												<h6>Numerous Dinosaur Footprints Discovered in Remote Alaskan Peninsula</h6>
+												While dinosaur fossils have been found across Alaska, there are very few
+												records
+												of these ancient animals in the Alaskan Peninsula.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-12 order-sm-3 col-md-12 order-md-2 col-lg order-lg-3" id="right-col">
+						<div class="main-content sticked">
+							<div class="section-title">OPINION</div>
+							<div class="boxed opinion py-3">
+								<div class="row">
+									<div class="col-2"><img src="images/max-abrahms.png" class="opinion-img" alt="article-picture">
+									</div>
+									<div class="col-8 col-sm-9">
+										<p class="info">Baghdadi's Death Does Not Matter</p>
+										<p class="byline p-0">BY MAX ABRAHMS</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="boxed opinion py-3">
+								<div class="row">
+									<div class="col-2"><img src="images/hamilton-xenakis.png" class="opinion-img" alt="article-picture">
+									</div>
+									<div class="col-8 col-sm-9">
+										<p class="info">The Shame of Abandoning Our Kurdish Allies Will Haunt Our Troops for Years</p>
+										<p class="byline p-0">BY JESSE HAMILTON AND STEPHEN N. XENAKIS</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="boxed opinion py-3">
+								<div class="row">
+									<div class="col-2"><img src="images/cristiana-grigore.png" class="opinion-img" alt="article-picture">
+									</div>
+									<div class="col-8 col-sm-9">
+										<p class="info">I'm Roma, and Your Halloween Gypsy Costume Is More Trick Than Treat</p>
+										<p class="byline p-0">BY CRISTIANA GRIGORE</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="boxed opinion py-3">
+								<div class="row">
+									<div class="col-2"><img src="images/seth-abramson.png" class="opinion-img" alt="article-picture">
+									</div>
+									<div class="col-8 col-sm-9">
+										<p class="info">Stop Calling It the Republican Party</p>
+										<p class="byline p-0">BY SETH ABRAMSON</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="boxed opinion py-3">
+								<div class="row">
+									<div class="col-2"><img src="images/miliband-moreno.png" class="opinion-img" alt="article-picture">
+									</div>
+									<div class="col-8 col-sm-9">
+										<p class="info">A Huge Latin American Migration Surge Is Coming. So Is an Opportunity</p>
+										<p class="byline p-0">BY DAVID MILIBAND AND LUIS ALBERTO MORENO</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="boxed opinion py-3" id="last-opinion">
+								<div class="row">
+									<div class="col-2"><img src="images/john-r-deni.jpg" class="opinion-img" alt="article-picture">
+									</div>
+									<div class="col-8 col-sm-9">
+										<p class="info">Germany's Refusal to Ban China's Huawei From 5G Is Dangerous for the West</p>
+										<p class="byline p-0">BY JOHN R. DENI</p>
+									</div>
+								</div>
+							</div>
+							<div class="section-title">LATEST NEWS</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/vaccine-jab-shot-measles-stock-getty.jpg" alt="Measless" class="img-fluid">
+									</div>
+									<h6>
+										Measless Virus Destroys Immune Systems of Unvaccinated Kids: Study
+									</h6>
+								</div>
+							</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/fda-tells-vampires-lay-off-lenses.jpg" alt="FDA" class="img-fluid">
+									</div>
+									<h6>
+										FDA Issues Halloween Warning: Decorative Contact Lenses Can Cause Blindness
+									</h6>
+								</div>
+							</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/chicago-overturned-foie-gras-ban-years-ago-will-new-york-do-same.jpg" alt="Chicago"
+											class="img-fluid"></div>
+									<h6>
+										Chicago Overturned Foie Gras Ban Years Ago, So Will New York Do the Same?
+									</h6>
+								</div>
+							</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/kellyanne-conway.jpg" alt="Fox" class="img-fluid"></div>
+									<h6>
+										Fox Host Confronts Conway Over Alleged Inaccuracies In Trump-Ukraine Call
+									</h6>
+								</div>
+							</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/convicted-murderer-pontrey-jones.jpg" alt="Convicted" class="img-fluid"></div>
+									<h6>
+										Man Convicted of Murdering Stepmother After Football Victory Dance
+									</h6>
+								</div>
+							</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/jim-mattress-mack-mcingvale.jpg" alt="Astros" class="img-fluid"></div>
+									<h6>
+										Astros Fan Mattres Mack Lost Millions on World Series Bets
+									</h6>
+								</div>
+							</div>
+							<div class="news">
+								<div class="clearfix related-info">
+									<div class="story-img">
+										<img src="images/all-mankind-apple.jpg" alt="astronaut" class="img-fluid"></div>
+									<h6>
+										'For All Mankind' Realese Date, Cast, Trailer Plot
+									</h6>
+								</div>
+							</div>
+							<div class="content-centered d-flex justify-content-center">
+								<div class="last-block-sign position-relative">
+									<div class="d-flex align-items-center mt-3">
+										<span class="p-2 align-self-center red-square d-block position-relative mr-3"></span>
+										<span class="p-2 text-main">Sign up for our Newsletter</span>
+									</div>
+									<span class="signup position-relative mt-3">SIGN UP<i class="fas fa-chevron-right"></i></span>
+									<p class="update position-relative">Update your preferences »</p>
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- Finished MAIN CONTENT-->
+		<!-- Blocks section-->
+
+		<section class="container-fluid wide in-the-magazine">
+			<div class="magazine">
+				<div class="row first-r">
+					<div class="col-md-3">
+						<div class="big-image">
+							<div class="boxed">
+								<a><img src="images/november-08-15-2019(1).jpg" class="img-fluid" alt="big-image"></a>
+								<a><span class="inner-caption">NOVEMBER 15 ISSUE</span></a>
+							</div>
+							<h3 class="gray text-center">SEE ALL FEATURES <i class="fas fa fa-chevron-circle-right"></i></h3>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-12 contained-title flex-row mt-0 align-items-start d-flex justify-content-center bordered">
+								<span class="red-square d-block position-relative mr-3"></span>
+								<span class="magazine-title pb-2 pt-0 mb-4">in the magazine</span>
+							</div>
+						</div>
+						<div class="row inner-3">
+							<div class="col-md-4 main-topics">
+								<div class="topic-img position-relative No1">
+								</div>
+								<div class="topic my-4 mx-0">
+									<span class="category-first">COVER</span>
+									<span class="category-second ml-3">POLITICS</span>
+								</div>
+								<h4 class="topic-title">Andrew Yang: Math, Jobs and the Robot Future</h4>
+							</div>
+							<div class="col-md-4 main-topics">
+								<div class="topic-img position-relative No2">
+								</div>
+								<div class="topic my-4 mx-0">
+									<span class="category-first">PERISCOPE</span>
+									<span class="category-second ml-3">WORLD</span>
+								</div>
+								<h4 class="topic-title">Tug of War: Photographs Capture Horror of Turkey's Offensive Into Syria </h4>
+							</div>
+							<div class="col-md-4 main-topics">
+								<div class="topic-img position-relative No3">
+								</div>
+								<div class="topic my-4 mx-0">
+									<span class="category-first">PERISCOPE</span>
+									<span class="category-second ml-3">POLITICS</span>
+								</div>
+								<h4 class="topic-title">Sheldon Whitehouse On Impeachment, Court-Packing and "Getting to 67 Votes"
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row second-r">
+					<div class="col-md-3 main-topics">
+						<div class="topic-img position-relative No4">
+						</div>
+						<div class="topic my-4 mx-0">
+							<span class="category-first">DOWNTIME</span>
+							<span class="category-second ml-3">CULTURE</span>
+						</div>
+						<h4 class="topic-title">The Literary Influences of Superstar Musician David Bowie</h4>
+					</div>
+					<div class="col-md-3 main-topics">
+						<div class="topic-img position-relative No5">
+						</div>
+						<div class="topic my-4 mx-0">
+							<span class="category-first">FEATURES</span>
+							<span class="category-second ml-3">POLITICS</span>
+						</div>
+						<h4 class="topic-title">9 Larger-Than-Life Sculpture Parks Around the World</h4>
+					</div>
+					<div class="col-md-3 main-topics">
+						<div class="topic-img position-relative No6">
+						</div>
+						<div class="topic my-4 mx-0">
+							<span class="category-first">DOWNTIME</span>
+							<span class="category-second ml-3">CULTURE</span>
+						</div>
+						<h4 class="topic-title">Andrew Yang: Math, Jobs and the Robot Future</h4>
+					</div>
+					<div class="col-md-3 main-topics">
+						<div class="topic-img position-relative No7">
+							<span class="category-first position-absolute " id="focused">INFOCUS</span>
+						</div>
+						<h4 class="topic-title">The Queen’s Speech</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide editor-spick">
+			<div class="row">
+				<div class="col-12 contained-title flex-row mt-0 align-items-start d-flex justify-content-center bordered">
+					<span class="red-square d-block position-relative mr-3"></span>
+					<span class="magazine-title pb-2 pt-0 mb-4">Editor's Pick</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/spy-abu-bakr-al-baghdadi-isis-syria-pressure.jpg" class="img-fluid"
+									alt="article-picture"><span class="inner-caption">NEWS</span></a>
+						</div>
+						<div class="story-info">
+							<h3>ISIS Spy Who Betrayed Baghdadi Was Under Pressure From Family: SDF Chief</h3>
+							<div class="main-text">The unnamed informant's family reportedly suffered under Islamic State rule
+								prompting him to seek revenge, General Mazloum Abdi said.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/zombie-costume.jpg" class="img-fluid" alt="article-picture"><span
+									class="inner-caption">TECH & SCIENCE</span></a>
+						</div>
+						<div class="story-info">
+							<h3>The Origin Stories of Your Favorite Halloween Monsters</h3>
+							<div class="main-text">From Haitian slaves to rare blood disorders and hallucinogenic plants, the
+								mythologies of zombies, witches, vampires and werewolves are surprisingly complex.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/jair-bolsonaro-brazil.jpg" class="img-fluid" alt="article-picture"><span
+									class="inner-caption">WORLD</span></a>
+						</div>
+						<div class="story-info">
+							<h3>Bolsonaro Threatens Not to Renew TV Network License After Negative Report</h3>
+							<div class="main-text">After a report linking Brazilian president Jair Bolsonaro with a high-profile
+								murder in 2018, Bolsonaro threatened not to renew the network's license.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/lordtown-ohio-gm-protest.jpg" class="img-fluid" alt="article-picture"><span
+									class="inner-caption">U.S.</span></a>
+						</div>
+						<div class="story-info">
+							<h3>Trump Is an 'Utter Failure' at Bringing Manufacturing Jobs Back to Swing States</h3>
+							<div class="main-text">Nobel Prize-winning economist Paul Krugman took issue with President Donald Trump's
+								repeated claims that the economy is doing better than ever under his administration.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/washington-nationals(1).jpg" class="img-fluid" alt="article-picture"></a>
+							<a><span class="inner-caption">SPORTS</span></a>
+						</div>
+						<div class="story-info">
+							<h3>The Washington Nationals Defied All Odds to Win the 2019 World Series</h3>
+							<div class="main-text">According to MLB Stats, the Nationals had less than a 0.1 percent chance to win the
+								World Series on May 28.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/mark-zuckerberg.jpg" class="img-fluid" alt="article-picture"></a>
+							<a><span class="inner-caption">NEWS</span></a>
+						</div>
+						<div class="story-info">
+							<h3>'Social Network' Writer Says Facebook Ads Are Now 'Assaulting Truth'</h3>
+							<div class="main-text">"Every square inch of that is a lie and it's under your logo," screenwriter Aaron
+								Sorkin said in an open letter to CEO Mark Zuckerberg. "That's not defending free speech, Mark."</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/meth-sriracha.jpg" class="img-fluid" alt="article-picture"></a>
+							<a><span class="inner-caption">WORLD</span></a>
+						</div>
+						<div class="story-info">
+							<h3>Police Seize More Than $200 Million Worth of Meth Hidden in Sriracha Sauce</h3>
+							<div class="main-text">Police seized more than $200 million worth of meth after it was shipped to
+								Australia from the U.S. hidden inside bottles of sriracha sauce.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/ukraine-donald-trump-john-eisenberg-alexander-vindman.jpg" class="img-fluid"
+									alt="article-picture"></a>
+							<a><span class="inner-caption"> </span></a>
+						</div>
+						<div class="story-info">
+							<h3>Who Is John Eisenberg? Trump Lawyer Restricted Ukraine Transcript Access</h3>
+							<div class="main-text">Vindman complained to Eisenberg—the White House legal adviser for national security
+								issues—about the administration's approach to Ukraine at least twice.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide slide-show">
+			<div class="row">
+				<div class="col-12 contained-title flex-row mt-0 align-items-start d-flex justify-content-center bordered">
+					<span class="red-square d-block position-relative mr-3 boxed-shadow"></span>
+					<span class="magazine-title pb-2 pt-0 mb-4">FEATURED SLIDESHOWS</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/nycc-2019-best-cosplay-augustus-st-cloud.jpg" class="img-fluid"
+									alt="article-picture"><span class="big-inner d-block text-center position-absolute">40</span></a>
+						</div>
+						<div class="story-info">
+							<h3>Our Cosplay Favorites from NYCC 2019</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/muir-pass-great-alone.jpg" class="img-fluid" alt="article-picture"><span
+									class="big-inner d-block text-center position-absolute">7</span></a>
+						</div>
+						<div class="story-info">
+							<h3>The Great Alone: Walking the Pacific Crest Trail</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/galapagos-cerro-brujo.jpg" class="img-fluid" alt="article-picture"><span
+									class="big-inner d-block text-center position-absolute">4</span></a>
+						</div>
+						<div class="story-info">
+							<h3>Cruise the Galapagos While Conserving Wildlife Found Nowhere Else</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bordered">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/still-2-eop.jpg" class="img-fluid" alt="article-picture"><span
+									class="big-inner d-block text-center position-absolute">8</span></a>
+						</div>
+						<div class="story-info">
+							<h3>The New Documentary Trying to Save the Most Trafficked Mammals in the World</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/lancaster-meeting-house.jpg" class="img-fluid" alt="article-picture"><span
+									class="big-inner d-block text-center position-absolute">11</span></a>
+						</div>
+						<div class="story-info">
+							<h3>American Masterpieces: Singular Expressions of National Genius</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/singita-kwitonda-lodge-exterior.jpg" class="img-fluid" alt="article-picture"><span
+									class="big-inner d-block text-center position-absolute">16</span></a>
+						</div>
+						<div class="story-info">
+							<h3>An Eco-Gorilla Opens in Rwanda</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide 2/3-grids">
+			<div class="section-title red-title">U.S.</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/chicago-overturned-foie-gras-ban-years-ago-will-new-york-do-same.jpg"
+									class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Chicago Overturned Foie Gras Ban Years Ago, So Will New York Do the Same</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/kellyanne-conway.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Fox Host Confronts Conway Over Alleged Inaccuracies In Trump-Ukraine Call</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line pb-4">
+						<img src="images/convicted-murderer-pontrey-jones.jpg" alt="small-news">
+						<span class="small-news">Man Convicted of Murdering Stepmother After Football Victory Dance</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line py-4">
+						<img src="images/nypd.jpg" alt="small-news">
+						<span class="small-news">Teenager Filmed Being Punched in NYPD Subway Brawl Sues for $5 Million</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row py-4">
+						<img src="images/gettyimages-968583588.jpg" alt="small-news">
+						<span class="small-news">Fox News Legal Expert Says Adam Schiff 'Following the Rules' in Inquiry</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide 2/3-grids">
+			<div class="section-title red-title">WORLD</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/cat-generic.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Man Allegedly Used a Cat As Weapon Against Police Officer</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/upset-man-airport.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Bride-to-Be Stole Bachelor Party Money, Left Groom and Friends Stranded</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line pb-4">
+						<img src="images/wwe-saudi-arabia.jpg" alt="small-news">
+						<span class="small-news">WWE, Saudi Arabia 'Sportswashing' Country's 'Dire Human Rights Record'</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line py-4">
+						<img src="images/supreme-court-western-australia.jpg" alt="small-news">
+						<span class="small-news">Man Jailed for Partially Decapitating Teenage Mom in 'Frenzied' Attack</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row py-4">
+						<img src="images/meth-sriracha.jpg" alt="small-news">
+						<span class="small-news">Police Seize More Than $200 Million Worth of Meth Hidden in Sriracha Sauce</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide 2/3-grids">
+			<div class="section-title red-title">Bussiness</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/lawrence-summers-clinton-wealth-tax.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Wealth Tax Would Have Boosted Anti-Semitism: Harvard President Emeritus</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/874567414.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>U.S. Deficit Skyrockets 26 Percent Over 2018, Trump Tax Cuts Blamed for Gap</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line pb-4">
+						<img src="images/businesswoman.jpg" alt="small-news">
+						<span class="small-news">Female CEOs Face 'Greater Penalties' Than Men for Ethical Trangressions</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line py-4">
+						<img src="images/laptop.jpg" alt="small-news">
+						<span class="small-news">FBI Warns of Hidden Online Shopping Threats Such as E-Skimming</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row py-4">
+						<img src="images/pizza-hut.jpg" alt="small-news">
+						<span class="small-news">Pizza Hut Goes Green With 'Incogmeato' Sausage, Eco-Friendly Box</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide 2/3-grids">
+			<div class="section-title red-title">Tech & Science</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/devil-costume.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Believing in Witchcraft May Have Helped People Avoid Disease, Study Says</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/ice.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Freeze Warnings Issued Across Vast Swathes of U.S. over Halloween</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line pb-4">
+						<img src="images/otzi-iceman.jpg" alt="small-news">
+						<span class="small-news">Plants Found on Ötzi the Iceman's Clothes Offer Clues to His Final Journey</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line py-4">
+						<img src="images/tomsk-polytechnic-university-tpu-methanols-fountain-siberia.jpg" alt="small-news">
+						<span class="small-news">Video Shows Sea 'Violently Boiling' with Methane Bubbles in Siberia</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row py-4">
+						<img src="images/wizard-rock-prescott-national-forest.png" alt="small-news">
+						<span class="small-news">One-ton 'wizard Rock' Mysteriously Vanishes From National Forest in Arizona</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide 2/3-grids">
+			<div class="section-title red-title">Culture</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/fda-tells-vampires-lay-off-lenses.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>FDA Issues Halloween Warning: Decorative Contact Lenses Can Cause Blindness</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/all-mankind-apple.jpg" alt="article-news"></a>
+						</div>
+						<div class="story-info">
+							<h3>'For All Mankind' Release Date, Cast, Trailer Plot</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line pb-4">
+						<img src="images/making-murderer.jpg" alt="small-news">
+						<span class="small-news">'Making a Murderer' Fans Remember Teresa Halbach 14 Years After Murder</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line py-4">
+						<img src="images/good-place-season-4-finale.jpg" alt="small-news">
+						<span class="small-news">'The Good Place' Creator Reveals Which Episode Holds Key to the Finale</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-between flex-row py-4">
+						<img src="images/ghost-adventures.jpg" alt="small-news">
+						<span class="small-news">'Ghost Adventures' Crew Investigates 'Conjuring' House' on Halloween</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide 2/3-grids">
+			<div class="section-title red-title">Sports</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/team-hogan-flair-wwe-crown-jewel.jpg" class="img-fluid" alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Crown Jewel 2019 Results</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="story">
+						<div class="boxed">
+							<a><img src="images/washington-nationals-world-series-champs.jpg" class="img-fluid"
+									alt="article-picture"></a>
+						</div>
+						<div class="story-info">
+							<h3>Washintons National Win Bizarre, Wacky Improbable 2019 World Series</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="in-line-news d-flex justify-content-between flex-row bordered-line pb-4">
+						<img src="images/wwe-crown-jewel-tag-team-turmoil.jpg" alt="small-news">
+						<span class="small-news">When and How to Watch WWE Crown Jewel</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-left flex-row bordered-line py-4">
+						<img src="images/finn-balor-attacks-johnny-gargano-nxt-wwe.jpg" alt="small-news">
+						<span class="small-news ml-1">NXT Results (10/30)</span>
+					</div>
+					<div class="in-line-news d-flex justify-content-left flex-row py-4">
+						<img src="images/all-elite-wrestling-dynamite-tag-team-championship.jpg" alt="small-news">
+						<span class="small-news ml-1">AEW Dinamite Results (10/30)</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wide subscribe">
+			<div class="row">
+				<div class="col-sm-12 col-lg-7">
+					<div class="col-12 section-title red-title subs">Subscribe</div>
+					<div class="col-12 f1 d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start">
+						<div class="fn image-bottom d-flex mx-auto align-items-center">
+							<div class="mag-thumb prev"><img src="images/november-01-2019-cover.jpg" alt="MNM"></div>
+							<div class="mag-thumb current">
+								<img src="images/november-08-15-2019(1).jpg" alt="MNM">
+							</div>
+						</div>
+						<div class="f1 info-new pl-5">
+							<h3>In-depth Stories You Don't See Elsewhere About Topics You Want to Read!
+							</h3>
+							<p>All Access + Weekly Delivery.<br>Choose A
+								Membership
+								That's Perfect for You!</p>
+							<a href="https://subscription.newsweek.com/subscribe?utm_source=NWwebsite&amp;utm_medium=bottom-page&amp;utm_campaign=subscribe-button"
+								target="_blank"><span class="lk red mb-4">Subscribe</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-5">
+					<div class="section-title red-title subs">NEWSLETTER</div>
+					<div class="col-r f1 d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start">
+						<div class="fn image-last mx-auto">
+						</div>
+						<div class="f1 info-new pl-5">
+							<h3>The Starting 5</h3>
+							<p>Take back your inbox. Sign up for our newsletter and start making sense of the world around you.</p>
+							<a href="https://email.newsweek.com/landing/starting5?utm_source=NWwebsite&amp;utm_medium=Bottom&amp;utm_campaign=Starting5"
+								target="_blank"><span class="lk red">Sign Up</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- Blocks section END -->
+	</main>
+	<!-- Started Footer-->
+	<footer class="container-fluid">
+		<div class="footer-top bordered">
+			<div class="row">
+				<div class="col-md-9 logo-footer">
+					<svg class="mb-2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="user-select: auto;"
+						xml:space="preserve">
+						<g style="user-select: auto;">
+							<path class="st0"
+								d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+								style="user-select: auto;"></path>
+						</g>
+					</svg>
+					<span class="copy pl-3 align-bottom">© 2019 Newsweek</span>
+				</div>
+				<div class="col-md-3 my-4 social-icons text-sm-left text-right">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-tumblr"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#"><i class="fab fa-facebook-square"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="row justify-content-between">
+				<div class="col-md-7 footer-bottom-left">
+					<ul class="list row m-0 p-0 d-flex">
+						<li class="li-item first pr-3 mr-3 mb-3"><a href="#">About Us</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Corrections</a> </li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Contact Us</a> </li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Editorial Guidelines</a> </li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Advertise</a> </li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Copyright</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Terms & Conditions</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Privacy Policy</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Cookie Policy</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Terms of Sale</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Archive</a></li>
+						<li class="li-item pr-3 mr-3 mb-3"><a href="#">Announcements</a></li>
+						<li class="li-item pr-3 mr-3 mb-3 last"><a href="#">Consent preferences</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 footer-bottom-right">
+					<div class="row justify-content-between">
+
+						<ul class="list col-12 row justify-content-start justify-content-md-end text-left text-lg-right py-2 mx-4"
+							id="right">
+							<li><a href="#"><span class="editions mr-5">Editions:</span></a></li>
+							<li class="first li-item pr-3 mr-3 mb-3"><a href="#">U.S. Edition</a></li>
+							<li class="li-item pr-3 mr-3 mb-3"><a href="#">Middle East</a></li>
+							<li class="li-item pr-3 mr-3 mb-3"><a href="#">日本</a></li>
+							<li class="li-item pr-3 mr-3 mb-3"><a href="#">한국</a></li>
+							<li class="li-item pr-3 mr-3 mb-3"><a href="#">Pakistan</a></li>
+							<li class="li-item pr-3 mr-3 mb-3"><a href="#">Polska</a></li>
+							<li class="last li-item pr-3 mr-3 mb-3"><a href="#">România</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>
