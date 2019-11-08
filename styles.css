@@ -72,14 +72,18 @@ a {
   color: #fff;
 }
 
-.culture-title > a {
-  font-family: "Lora", serif;
-  font-size: 2rem;
-  color: #272727;
-  text-decoration: none;
+.social-icons > a {
+  vertical-align: bottom;
+  font-size: 25px;
+  color: #666 !important;
+  padding-left: 7px;
 }
 
-.culture-title > a:hover {
+footer a {
+  color: #666 !important;
+}
+
+.culture-title > a {
   font-family: "Lora", serif;
   font-size: 2rem;
   color: #272727;
@@ -88,6 +92,18 @@ a {
 
 .last-nav > li > a {
   cursor: pointer;
+}
+
+footer a:hover {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.culture-title > a:hover {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+  color: #272727;
+  text-decoration: none;
 }
 
 .culture-item .tags a {
@@ -773,32 +789,16 @@ footer {
   margin-top: 7rem;
 }
 
-.social-icons > a {
-  vertical-align: bottom;
-  font-size: 25px;
-  color: #666 !important;
-  padding-left: 7px;
-}
-
 .list {
   font-size: 14px;
   line-height: 15px;
   list-style: none;
-  color: #666 !important;;
+  color: #666 !important;
 }
 
 .li-item {
   border-right: 1px solid #d9d9d9;
   cursor: pointer;
-}
-
-footer a {
-  color: #666 !important;
-}
-
-footer a:hover {
-  color: #000 !important;
-  text-decoration: none;
 }
 
 .last {
