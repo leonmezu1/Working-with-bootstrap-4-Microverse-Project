@@ -20,7 +20,7 @@
 <!-- ABOUT THE PROJECT -->
 # About The Project
 
-Bootstrap 4 Framework it's a powerful tool that helps web developers to build amazing projects accelerating coding by preprocessing styling, positioning and behavior utilities in classes hosted in the framework allowing also keep CSS 3 stylesheet minimized.
+Bootstrap 4 Framework it's a powerful tool that helps web developers to build amazing projects accelerating coding by preprocessing styling, positioning and behavior utilities in classes hosted in the framework allowing also keep CSS 3 style sheet minimized.
 
 That's why a good way to learn how to use this framework it's building a replica of a site that actually uses it.
 
@@ -38,7 +38,7 @@ That's why a good way to learn how to use this framework it's building a replica
 
 Identify the breakpoint points used in the original page, align elements with float or flex and grids, use background images, and elements positioning.
 
-## Contrains
+## Constraints
 
 MUST: use of linterns, Bootstrap CSS classes, follow CSS best practices, use of CSS Reset, use W3c validation services.
 
